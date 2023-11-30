@@ -322,6 +322,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1466690137 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7174261262625171295, guid: 0bbe3a7a7de3061468e203d3b692183b, type: 3}
+  m_PrefabInstance: {fileID: 2476163388941380039}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1466690145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466690137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cefbb4e29d418c459eeae9966cd39e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 30
+  collisionFlag: 0
+  photon: {fileID: 8450296702061921868, guid: bd077d52b08a0fd4e9ae6aa714f240a1, type: 3}
 --- !u!1 &1561916762
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,6 +639,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Electron2
       objectReference: {fileID: 0}
+    - target: {fileID: 7174261262625171295, guid: 0bbe3a7a7de3061468e203d3b692183b, type: 3}
+      propertyPath: m_TagString
+      value: Electron2
+      objectReference: {fileID: 0}
     - target: {fileID: 8920597812208652458, guid: 0bbe3a7a7de3061468e203d3b692183b, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -675,10 +699,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3378051816135330162, guid: 0bbe3a7a7de3061468e203d3b692183b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7174261262625171295, guid: 0bbe3a7a7de3061468e203d3b692183b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1466690145}
   m_SourcePrefab: {fileID: 100100000, guid: 0bbe3a7a7de3061468e203d3b692183b, type: 3}
 --- !u!1001 &5244050174638876036
 PrefabInstance:
@@ -690,6 +718,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2087777478785153308, guid: 1aa49869414d0e941a17da1b10ca7073, type: 3}
       propertyPath: m_Name
+      value: Electron1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2087777478785153308, guid: 1aa49869414d0e941a17da1b10ca7073, type: 3}
+      propertyPath: m_TagString
       value: Electron1
       objectReference: {fileID: 0}
     - target: {fileID: 2679068985856803856, guid: 1aa49869414d0e941a17da1b10ca7073, type: 3}
