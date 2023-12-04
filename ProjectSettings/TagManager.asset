@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Electron1
   - Electron2
+  - Electron
   layers:
   - Default
   - TransparentFX

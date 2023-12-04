@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7252200038594347653}
   - component: {fileID: 2505887223338062294}
   m_Layer: 0
-  m_Name: Electron1
+  m_Name: Electron
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,7 +35,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2851010298629593525
 MeshFilter:
@@ -106,7 +106,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 2
+  m_Radius: 0.6
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &8931223041614197236
 Rigidbody:
@@ -147,6 +147,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cefbb4e29d418c459eeae9966cd39e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 30
+  collisionFlag: 0
+  photon: {fileID: 0}
 --- !u!64 &2505887223338062294
 MeshCollider:
   m_ObjectHideFlags: 0

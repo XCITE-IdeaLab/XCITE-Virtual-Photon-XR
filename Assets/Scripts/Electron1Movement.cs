@@ -11,8 +11,6 @@ public class Electron1Movement : MonoBehaviour
     Vector3 e1Direction = new Vector3(1, 1, 0);
     Vector3 e2Direction = new Vector3(-1, 1, 0);
     Vector3 direction = new Vector3(0, 1, 0);
-    //position for photon creation
-    Vector3 spawnPos1 = new Vector3(250, 10, 0);
 
     public GameObject photon;
 
@@ -66,8 +64,11 @@ public class Electron1Movement : MonoBehaviour
             collisionFlag = true;
             other.GetComponent<Electron1Movement>().collisionFlag = true;
 
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+
             //reset flags after delay by using coroutine
-            StartCoroutine(ResetCollisionFlags(0.5f, other));
+            //StartCoroutine(ResetCollisionFlags(0.5f, other));
         }
 
     }
