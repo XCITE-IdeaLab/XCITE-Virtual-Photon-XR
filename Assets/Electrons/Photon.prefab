@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4214140099464448993}
   - component: {fileID: 7482087631869783035}
   - component: {fileID: 118006293760201932}
+  - component: {fileID: 7740808043650887018}
   m_Layer: 0
   m_Name: Photon
   m_TagString: Untagged
@@ -106,6 +107,18 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.6
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7740808043650887018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8450296702061921868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f438d3dfe63f6a44b25bd8f5b49ee8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8566398243685608976
 GameObject:
   m_ObjectHideFlags: 0

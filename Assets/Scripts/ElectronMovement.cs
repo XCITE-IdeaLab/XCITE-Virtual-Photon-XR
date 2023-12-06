@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Electron1Movement : MonoBehaviour
+public class ElectronMovement : MonoBehaviour
 {
     ///Variables
     public float speed = 30.0f;
@@ -40,7 +40,7 @@ public class Electron1Movement : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         collisionFlag = false;
-        other.GetComponent<Electron1Movement>().collisionFlag = false;
+        other.GetComponent<ElectronMovement>().collisionFlag = false;
     }
     void OnTriggerEnter(Collider other)
     {
@@ -55,14 +55,23 @@ public class Electron1Movement : MonoBehaviour
         }
 
         //check flags. if all false, then no collision yet
-        if (!collisionFlag && !other.GetComponent<Electron1Movement>().collisionFlag)
+        if (!collisionFlag && !other.GetComponent<ElectronMovement>().collisionFlag)
         {
-            //create photon at collision point
-            Instantiate(photon, gameObject.transform.position, photon.transform.rotation);
+            //get collision angle
+            Vector3 collisionNormal = (transform.position - other.transform.position).normalized;
+            Vector3 reflectDirection = Vector3.Reflect(direction, collisionNormal);
+
+            // Create photon at collision point
+            GameObject newPhoton = Instantiate(photon, transform.position, Quaternion.identity);
+            PhotonMovement photonMovement = newPhoton.GetComponent<PhotonMovement>();
+
+            // Set photon direction and velocity based on collision
+            photonMovement.SetDirection(reflectDirection);
+            photonMovement.SetVelocity(speed);
 
             //update flags to true to avoid dobule collision/ creation
             collisionFlag = true;
-            other.GetComponent<Electron1Movement>().collisionFlag = true;
+            other.GetComponent<ElectronMovement>().collisionFlag = true;
 
             Destroy(other.gameObject);
             Destroy(gameObject);
