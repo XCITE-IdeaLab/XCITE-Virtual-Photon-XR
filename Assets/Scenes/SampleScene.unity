@@ -139,6 +139,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Electron2
       objectReference: {fileID: 0}
+    - target: {fileID: 2679068985856803856, guid: 1aa49869414d0e941a17da1b10ca7073, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6540240270950827600, guid: 1aa49869414d0e941a17da1b10ca7073, type: 3}
       propertyPath: m_RootOrder
       value: 6

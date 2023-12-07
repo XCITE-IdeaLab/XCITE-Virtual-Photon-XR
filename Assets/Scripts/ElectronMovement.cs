@@ -44,21 +44,20 @@ public class ElectronMovement : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        //update direction of electron after collision. Switch out their directions to recreate them bouncing off each other. 
-        if (gameObject.tag == "Electron1")
-        {
-            direction = e2Direction;
-        }
-        else if (gameObject.tag == "Electron2")
-        {
-            direction = e1Direction;
-        }
-
         //check flags. if all false, then no collision yet
         if (!collisionFlag && !other.GetComponent<ElectronMovement>().collisionFlag)
         {
+            if (gameObject.tag == "Electron1")
+            {
+                Debug.Log("E1 CALLING");
+            }
+            else if (gameObject.tag == "Electron2")
+            {
+                Debug.Log("E2 CALLING");
+            }
+
             //get collision angle
-            Vector3 collisionNormal = (transform.position - other.transform.position).normalized;
+            Vector3 collisionNormal = (transform.position + other.transform.position).normalized;
             Vector3 reflectDirection = Vector3.Reflect(direction, collisionNormal);
 
             // Create photon at collision point
